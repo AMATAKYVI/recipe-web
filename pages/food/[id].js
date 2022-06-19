@@ -52,7 +52,9 @@ function FoodPage({ data, params }) {
 export async function getServerSideProps(context) {
   const { params } = context;
 
-  const getData = await fetch(`http://localhost:3000/api/food/${params.id}`);
+  const getData = await fetch(
+    `https://recipe-web-three.vercel.app/api/food/${params.id}`
+  );
   const getNewData = await getData.json();
   const { data } = getNewData;
   return {

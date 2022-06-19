@@ -17,13 +17,16 @@ function BodyPart({ data }) {
       const query = {
         query: inputValue,
       };
-      const getData = await fetch('http://localhost:3000/api/food/searchfood', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(query),
-      });
+      const getData = await fetch(
+        'https://recipe-web-three.vercel.app/api/food/searchfood',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(query),
+        }
+      );
       const data = await getData.json();
       setNewArraySearch(data);
     };

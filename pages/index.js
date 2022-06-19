@@ -19,7 +19,9 @@ export default function Home({ data }) {
   );
 }
 export async function getServerSideProps(context) {
-  const getData = await fetch('http://localhost:3000/api/food/allfood');
+  const getData = await fetch(
+    'https://recipe-web-three.vercel.app/api/food/allfood'
+  );
   const data = await getData.json();
   return {
     props: {
