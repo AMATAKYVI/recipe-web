@@ -66,7 +66,7 @@ function BodyPart({ data }) {
               })}
             </div>
           ) : newArraySearch[0]?.data?.length == 0 && inputValue != '' ? (
-            <div className="absolute top-15 border  left-[20.9%] bg-white w-[50%] transition-all duration-200">
+            <div className="absolute top-15 border  sm:left-[20.9%] bg-white w-[50%] transition-all duration-200">
               No match
             </div>
           ) : (
