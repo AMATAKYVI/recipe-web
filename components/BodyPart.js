@@ -10,13 +10,13 @@ function BodyPart({ data }) {
     if (!data) {
       return;
     }
-    if (!inputValue || !inputValueMobile) {
+    if (!inputValue) {
       return;
     }
     //recipe-web-three.vercel.app
     const getMatchSearch = async () => {
       const query = {
-        query: inputValue || inputValueMobile,
+        query: inputValue,
       };
       const getData = await fetch(
         `https://recipe-web-three.vercel.app/api/food/searchfood`,
@@ -33,7 +33,6 @@ function BodyPart({ data }) {
     };
     getMatchSearch();
   }, [data, inputValue, inputValueMobile]);
-  // console.log(newArraySearch[0].data);
   return (
     <div>
       <div className="px-5 py-4">
@@ -67,8 +66,7 @@ function BodyPart({ data }) {
                 );
               })}
             </div>
-          ) : (newArraySearch[0]?.data?.length == 0 && inputValue != '') ||
-            inputValueMobile != '' ? (
+          ) : newArraySearch[0]?.data?.length == 0 && inputValue != '' ? (
             <div className="absolute top-15 border  left-[20.9%] bg-white w-[50%] transition-all duration-200">
               No match
             </div>
