@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 function BodyPart({ data }) {
   const [inputValue, setInputValue] = useState('');
   const [inputValueMobile, setInputValueMobile] = useState('');
-
+  console.log(inputValueMobile);
   const router = useRouter();
   const [newArraySearch, setNewArraySearch] = useState([]);
   useEffect(() => {
@@ -53,7 +53,7 @@ function BodyPart({ data }) {
               className="w-[50%] py-2 px-2 text-lg outline-none border rounded-t "
             />
           </form>
-          {newArraySearch[0]?.data?.length > 0 && inputValue != '' ? (
+          {newArraySearch[0]?.data?.length > 0 && inputValueMobile != '' ? (
             <div className="absolute top-15 border sm:left-[20.9%] bg-white w-[50%] transition-all duration-200">
               {newArraySearch[0]?.data?.map((item) => {
                 return (
@@ -67,7 +67,7 @@ function BodyPart({ data }) {
                 );
               })}
             </div>
-          ) : newArraySearch[0]?.data?.length == 0 && inputValue != '' ? (
+          ) : newArraySearch[0]?.data?.length == 0 && inputValueMobile != '' ? (
             <div className="absolute top-15 border  left-[20.9%] bg-white w-[50%] transition-all duration-200">
               No match
             </div>
