@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 
 function BodyPart({ data }) {
   const [inputValue, setInputValue] = useState('');
+  const [inputValueMobile, setInputValueMobile] = useState('');
+
   const router = useRouter();
   const [newArraySearch, setNewArraySearch] = useState([]);
   useEffect(() => {
@@ -12,13 +14,13 @@ function BodyPart({ data }) {
     if (!inputValue) {
       return;
     }
-
+    //recipe-web-three.vercel.app
     const getMatchSearch = async () => {
       const query = {
         query: inputValue,
       };
       const getData = await fetch(
-        'https://recipe-web-three.vercel.app/api/food/searchfood',
+        `https://recipe-web-three.vercel.app/api/food/searchfood`,
         {
           method: 'POST',
           headers: {
@@ -46,12 +48,13 @@ function BodyPart({ data }) {
             </label>
             <input
               type="search"
+              onKeyUp={(e) => setInputValueMobile(e.target.value)}
               onChange={(e) => setInputValue(e.target.value)}
               className="w-[50%] py-2 px-2 text-lg outline-none border rounded-t "
             />
           </form>
           {newArraySearch[0]?.data?.length > 0 && inputValue != '' ? (
-            <div className="absolute top-15 border left-[20.9%] bg-white w-[50%] transition-all duration-200">
+            <div className="absolute top-15 border sm:left-[20.9%] bg-white w-[50%] transition-all duration-200">
               {newArraySearch[0]?.data?.map((item) => {
                 return (
                   <div
@@ -64,7 +67,8 @@ function BodyPart({ data }) {
                 );
               })}
             </div>
-          ) : newArraySearch[0]?.data?.length == 0 && inputValue != '' ? (
+          ) : (newArraySearch[0]?.data?.length == 0 && inputValue != '') ||
+            inputValueMobile != '' ? (
             <div className="absolute top-15 border  left-[20.9%] bg-white w-[50%] transition-all duration-200">
               No match
             </div>

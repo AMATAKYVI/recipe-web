@@ -49,6 +49,7 @@ function FoodPage({ data, params }) {
     </div>
   );
 }
+//recipe-web-three.vercel.app
 export async function getServerSideProps(context) {
   const { params } = context;
 
