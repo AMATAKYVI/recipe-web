@@ -11,13 +11,13 @@ function BodyPart({ data }) {
     if (!data) {
       return;
     }
-    if (!inputValue) {
+    if (!inputValue || !inputValueMobile) {
       return;
     }
     //recipe-web-three.vercel.app
     const getMatchSearch = async () => {
       const query = {
-        query: inputValue,
+        query: inputValue ? inputValue : inputValueMobile,
       };
       const getData = await fetch(
         `https://recipe-web-three.vercel.app/api/food/searchfood`,
@@ -33,7 +33,7 @@ function BodyPart({ data }) {
       setNewArraySearch(data);
     };
     getMatchSearch();
-  }, [data, inputValue]);
+  }, [data, inputValue, inputValueMobile]);
   // console.log(newArraySearch[0].data);
   return (
     <div>
