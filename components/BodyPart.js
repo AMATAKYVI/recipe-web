@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 
 function BodyPart({ data }) {
-  const [inputValue, setInputValue] = useState('');
+  // const [inputValue, setInputValue] = useState('');
   const [inputValueMobile, setInputValueMobile] = useState('');
   const router = useRouter();
   const [newArraySearch, setNewArraySearch] = useState([]);
@@ -10,7 +10,7 @@ function BodyPart({ data }) {
     if (!data) {
       return;
     }
-    if (!inputValue) {
+    if (!inputValueMobile) {
       return;
     }
     //recipe-web-three.vercel.app
@@ -32,7 +32,7 @@ function BodyPart({ data }) {
       setNewArraySearch(data);
     };
     getMatchSearch();
-  }, [data, inputValue, inputValueMobile]);
+  }, [data, inputValueMobile]);
   return (
     <div>
       <div className="px-5 py-4">
@@ -50,10 +50,10 @@ function BodyPart({ data }) {
                 e.preventDefault();
                 setInputValueMobile(e.target.value);
               }}
-              onChange={(e) => {
-                e.preventDefault();
-                setInputValue(e.target.value);
-              }}
+              // onChange={(e) => {
+              //   e.preventDefault();
+              //   setInputValue(e.target.value);
+              // }}
               className="w-[50%] py-2 px-2 text-lg outline-none border rounded-t "
             />
           </form>
