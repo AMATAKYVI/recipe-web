@@ -16,7 +16,7 @@ function BodyPart({ data }) {
     //recipe-web-three.vercel.app
     const getMatchSearch = async () => {
       const query = {
-        query: inputValue,
+        query: inputValueMobile,
       };
       const getData = await fetch(
         `https://recipe-web-three.vercel.app/api/food/searchfood`,
