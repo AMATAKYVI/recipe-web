@@ -46,8 +46,14 @@ function BodyPart({ data }) {
             </label>
             <input
               type="search"
-              onKeyUp={(e) => setInputValueMobile(e.target.value)}
-              onChange={(e) => setInputValue(e.target.value)}
+              onKeyUp={(e) => {
+                e.preventDefault();
+                setInputValueMobile(e.target.value);
+              }}
+              onChange={(e) => {
+                e.preventDefault();
+                setInputValue(e.target.value);
+              }}
               className="w-[50%] py-2 px-2 text-lg outline-none border rounded-t "
             />
           </form>
