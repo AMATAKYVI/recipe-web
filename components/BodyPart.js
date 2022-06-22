@@ -17,7 +17,7 @@ function BodyPart({ data }) {
     //recipe-web-three.vercel.app
     const getMatchSearch = async () => {
       const query = {
-        query: inputValueMobile,
+        query: inputValueMobile || inputValue,
       };
       const getData = await fetch(
         `https://recipe-web-three.vercel.app/api/food/searchfood`,
@@ -49,11 +49,13 @@ function BodyPart({ data }) {
             <input
               type="search"
               onKeyUp={(e) => setInputValueMobile(e.target.value)}
-              onChange={(e) => setInputValueMobile(e.target.value)}
+              onChange={(e) => setInputValue(e.target.value)}
               className="w-[50%] py-2 px-2 text-lg outline-none border rounded-t "
             />
           </form>
-          {newArraySearch[0]?.data?.length > 0 && inputValueMobile != '' ? (
+          {newArraySearch[0]?.data?.length > 0 &&
+          inputValue != '' &&
+          inputValueMobile != '' ? (
             <div className="absolute top-15 border sm:left-[20.9%] bg-white w-[50%] transition-all duration-200">
               {newArraySearch[0]?.data?.map((item) => {
                 return (
@@ -67,7 +69,9 @@ function BodyPart({ data }) {
                 );
               })}
             </div>
-          ) : newArraySearch[0]?.data?.length == 0 && inputValueMobile != '' ? (
+          ) : newArraySearch[0]?.data?.length == 0 &&
+            inputValue != '' &&
+            inputValueMobile != '' ? (
             <div className="absolute top-15 border  left-[20.9%] bg-white w-[50%] transition-all duration-200">
               No match
             </div>
