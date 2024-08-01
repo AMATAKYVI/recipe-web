@@ -1,3 +1,4 @@
+'use client';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 
@@ -18,16 +19,13 @@ function BodyPart({ data }) {
       const query = {
         query: inputValueMobile.toLowerCase(),
       };
-      const getData = await fetch(
-        `https://recipe-web-three.vercel.app/api/food/searchfood`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(query),
-        }
-      );
+      const getData = await fetch(`api/food/searchfood`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(query),
+      });
       const data = await getData.json();
       setNewArraySearch(data);
     };
