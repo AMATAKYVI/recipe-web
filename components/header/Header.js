@@ -5,7 +5,7 @@ import { Instagram as InstagramIcon } from 'lucide-react';
 
 function Header() {
   return (
-    <div className="flex justify-between py-5 px-2 border-b-2 items-center">
+    <div className="flex justify-between py-5 px-2 border-b mb-5 items-center">
       {/* logo image */}
       <div className="text-lg">LogoImage</div>
       {/* middle links */}
