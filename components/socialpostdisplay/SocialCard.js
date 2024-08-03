@@ -4,7 +4,10 @@ function SocialCard({ social }) {
   return (
     <div>
       {/* post account header */}
-      <div className="">title name</div>
+      <div className="flex">
+        <img src={`/Oval.png`} alt="" className="" />
+        <div className="">{social.account}</div>
+      </div>
       {/* post account img */}
       <div className="">img</div>
       {/* post icons like, share, save */}
