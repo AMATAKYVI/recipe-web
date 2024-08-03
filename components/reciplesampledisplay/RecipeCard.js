@@ -1,9 +1,15 @@
+'use client';
 import React from 'react';
 import { Clock, Drumstick, Heart as HeartIcon } from 'lucide-react';
+import { useRouter } from 'next/router';
 
 function RecipeCard({ food }) {
+  const router = useRouter();
   return (
-    <div className="max-h-[300px] border rounded-lg cursor-pointer hover:bg-gray-100 transform duration-200 shadow-lg z-1">
+    <div
+      className="max-h-[300px] border rounded-lg cursor-pointer hover:bg-gray-100 transform duration-200 shadow-lg z-1"
+      onClick={() => router.push(`/food/${food.id}`)}
+    >
       <div className="relative w-content h-[60%] ">
         <span className="absolute top-5 right-5 bg-gray-200 rounded-full p-2 cursor-pointer hover:bg-gray-300 transform duration-200 z-10">
           <HeartIcon className="w-5 h-5 rounded-full" />

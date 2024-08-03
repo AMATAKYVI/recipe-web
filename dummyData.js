@@ -5,6 +5,7 @@ export const dummyFoodData = [
     name: 'Italian PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'italianpercachutaste',
+    category: 'breakfast',
   },
   {
     id: '2',
@@ -12,6 +13,7 @@ export const dummyFoodData = [
     name: 'Sasha PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'sashapercachutaste',
+    category: 'breakfast',
   },
   {
     id: '3',
@@ -19,6 +21,7 @@ export const dummyFoodData = [
     name: 'MahiTa PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'mahitapercachutaste',
+    category: 'breakfast',
   },
   {
     id: '4',
@@ -26,6 +29,7 @@ export const dummyFoodData = [
     name: 'BulDaVi PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'buldavipercachutaste',
+    category: 'breakfast',
   },
   {
     id: '5',
@@ -33,6 +37,7 @@ export const dummyFoodData = [
     name: 'LaPongTe PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'lapongtepercachutaste',
+    category: 'breakfast',
   },
   {
     id: '6',
@@ -40,6 +45,7 @@ export const dummyFoodData = [
     name: 'SeeCC PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'seeccpercachutaste',
+    category: 'breakfast',
   },
   {
     id: '7',
@@ -47,6 +53,7 @@ export const dummyFoodData = [
     name: 'BesyTO PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'besytopercachutaste',
+    category: 'vegan',
   },
   {
     id: '8',
@@ -54,6 +61,7 @@ export const dummyFoodData = [
     name: 'Fronsis PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'fronsispercachutaste',
+    category: 'vegan',
   },
   {
     id: '9',
@@ -61,6 +69,7 @@ export const dummyFoodData = [
     name: 'Franko PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'frankopercachutaste',
+    category: 'vegan',
   },
   {
     id: '10',
@@ -68,6 +77,7 @@ export const dummyFoodData = [
     name: 'Ansa PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'ansapercachutaste',
+    category: 'vegan',
   },
   {
     id: '11',
@@ -75,6 +85,7 @@ export const dummyFoodData = [
     name: 'Beta PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'beta PercaChu Taste',
+    category: 'vegan',
   },
   {
     id: '12',
@@ -82,6 +93,7 @@ export const dummyFoodData = [
     name: 'Cana PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'canapercachutaste',
+    category: 'meat',
   },
   {
     id: '13',
@@ -89,6 +101,7 @@ export const dummyFoodData = [
     name: 'Dasa PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'dasapercachutaste',
+    category: 'meat',
   },
   {
     id: '14',
@@ -96,6 +109,7 @@ export const dummyFoodData = [
     name: 'Esa PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'esapercachutaste',
+    category: 'meat',
   },
   {
     id: '15',
@@ -103,6 +117,7 @@ export const dummyFoodData = [
     name: 'Fedo PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'fedopercachutaste',
+    category: 'meat',
   },
   {
     id: '16',
@@ -110,6 +125,7 @@ export const dummyFoodData = [
     name: 'Geina PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'geinapercachutaste',
+    category: 'meat',
   },
   {
     id: '17',
@@ -117,6 +133,7 @@ export const dummyFoodData = [
     name: 'Haree PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'hareepercachutaste',
+    category: 'meat',
   },
   {
     id: '18',
@@ -124,6 +141,7 @@ export const dummyFoodData = [
     name: 'Ios PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'iospercachutaste',
+    category: 'desert',
   },
   {
     id: '19',
@@ -131,6 +149,7 @@ export const dummyFoodData = [
     name: 'Japanese PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'japanesepercachutaste',
+    category: 'desert',
   },
   {
     id: '20',
@@ -138,6 +157,7 @@ export const dummyFoodData = [
     name: 'LanderLong PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'landerlongpercachutaste',
+    category: 'desert',
   },
   {
     id: '21',
@@ -145,6 +165,7 @@ export const dummyFoodData = [
     name: 'KO PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'kopercachutaste',
+    category: 'desert',
   },
   {
     id: '22',
@@ -152,6 +173,7 @@ export const dummyFoodData = [
     name: 'Mamita PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'mamitapercachutaste',
+    category: 'desert',
   },
   {
     id: '23',
@@ -159,6 +181,7 @@ export const dummyFoodData = [
     name: 'NoPeso PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'nopesopercachutaste',
+    category: 'desert',
   },
   {
     id: '24',
@@ -166,6 +189,7 @@ export const dummyFoodData = [
     name: 'Osos PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'osospercachutaste',
+    category: 'desert',
   },
   {
     id: '25',
@@ -173,6 +197,7 @@ export const dummyFoodData = [
     name: 'Pawew PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'pawewpercachutaste',
+    category: 'desert',
   },
   {
     id: '26',
@@ -180,6 +205,7 @@ export const dummyFoodData = [
     name: 'Qers PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'qerspercachutaste',
+    category: 'desert',
   },
   {
     id: '27',
@@ -187,6 +213,7 @@ export const dummyFoodData = [
     name: 'Sada PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'sadapercachutaste',
+    category: 'desert',
   },
   {
     id: '28',
@@ -194,6 +221,7 @@ export const dummyFoodData = [
     name: 'Teoas PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'teoaspercachutaste',
+    category: 'desert',
   },
   {
     id: '29',
@@ -201,6 +229,7 @@ export const dummyFoodData = [
     name: 'West PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'westpercachutaste',
+    category: 'lunch',
   },
   {
     id: '30',
@@ -208,6 +237,7 @@ export const dummyFoodData = [
     name: 'Uno PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'unopercachutaste',
+    category: 'lunch',
   },
   {
     id: '31',
@@ -215,6 +245,7 @@ export const dummyFoodData = [
     name: 'Vivand PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'vivandpercachutaste',
+    category: 'lunch',
   },
   {
     id: '32',
@@ -222,6 +253,7 @@ export const dummyFoodData = [
     name: 'Xeo PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'xeopercachutaste',
+    category: 'lunch',
   },
   {
     id: '33',
@@ -229,6 +261,7 @@ export const dummyFoodData = [
     name: 'Yena PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'yenapercachutaste',
+    category: 'lunch',
   },
   {
     id: '34',
@@ -236,5 +269,6 @@ export const dummyFoodData = [
     name: 'Zoanal PercaChu Taste',
     ingredients: [{ salt: 'Salt 1/2 tablespoon', sugar: '3/2 teaspoons' }],
     searchString: 'zoanalpercachutaste',
+    category: 'lunch',
   },
 ];
