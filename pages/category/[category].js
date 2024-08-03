@@ -27,7 +27,7 @@ export async function getServerSideProps(context) {
 
   // change when in production
   const getData = await fetch(
-    `http://localhost:3000/api/food/category/${params.category}`
+    `https://recipe-web-three.vercel.app/api/food/category/${params.category}`
   );
   console.log(getData);
   const data = await getData.json();
