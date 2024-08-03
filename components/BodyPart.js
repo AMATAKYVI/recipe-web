@@ -1,14 +1,16 @@
 'use client';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import { dummyFoodData } from '../dummyData';
 
 function BodyPart({ data }) {
+  const [dummyData, setDummyDate] = useState(dummyFoodData);
   // const [inputValue, setInputValue] = useState('');
   const [inputValueMobile, setInputValueMobile] = useState('');
   const router = useRouter();
   const [newArraySearch, setNewArraySearch] = useState([]);
   useEffect(() => {
-    if (!data) {
+    if (!dummyData) {
       return;
     }
     if (!inputValueMobile) {
@@ -27,10 +29,10 @@ function BodyPart({ data }) {
         body: JSON.stringify(query),
       });
       const data = await getData.json();
-      setNewArraySearch(data);
+      setNewArraySearch(dummyData);
     };
     getMatchSearch();
-  }, [data, inputValueMobile]);
+  }, [dummyData, inputValueMobile]);
   return (
     <div>
       <div className="px-5 py-4">

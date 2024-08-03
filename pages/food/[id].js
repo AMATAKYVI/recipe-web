@@ -1,51 +1,23 @@
+import { Clock, Drumstick, Printer, Share } from 'lucide-react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import SingleRecipe from '../../components/singlerecipe/SingleRecipe';
+import EmailLetter from '../../components/emailletter/EmailLetter';
+import Footer from '../../components/footer/Footer';
+import SearchRecipe from '../../components/searchrecipe/SearchRecipe';
 
 function FoodPage({ data, params }) {
   const router = useRouter();
   console.log(data);
   return (
-    <div className="max-w-[1280px] mx-auto bg-[#243A73] text-white">
+    <div className="px-10 mx-auto ">
+      {/* <SearchRecipe /> */}
       {data.map((item) => {
-        return (
-          <div className=" border px-5" key={item.id}>
-            <div
-              onClick={() => router.push('/')}
-              className=" mb-8 cursor-pointer py-2 bg-blue-800 w-fit px-10 mt-2  rounded-lg  text-white font-semibold text-xl shadow-md shadow-blue-200 hover:bg-blue-700 transition-all duration-200"
-            >
-              Go back
-            </div>
-            <div className=" bg-gray-300 py-5 rounded-lg">
-              <img
-                src={item.img}
-                alt=""
-                className="w-[900px] h-[500px] object-contain mx-auto"
-              />
-            </div>
-            <div className="  mt-5 py-5 w-[500px] mx-auto px-5">
-              <div className="font-semibold text-3xl text-green-400">
-                Ingredients Information
-              </div>
-              <div className="p-10">
-                <h1 className="text-xl mb-10">
-                  <span className="text-blue-500"># </span>
-                  {item.name}
-                </h1>
-                <div>
-                  {item.ingredients.map((ex) => {
-                    return (
-                      <ul key={item.id} className="space-y-10">
-                        <li className="list-disc	">{ex.salt}</li>
-                        <li className="list-disc	">{ex.sugar}</li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        );
+        return <SingleRecipe key={item.id} item={item} />;
       })}
+      <EmailLetter />
+      {/* random recipe you might like? */}
+      <Footer />
     </div>
   );
 }
