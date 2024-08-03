@@ -1,10 +1,19 @@
+'use client';
 import React from 'react';
 import { Facebook as FacebookIcon } from 'lucide-react';
 import { Twitter as TwitterIcon } from 'lucide-react';
 import { Instagram as InstagramIcon } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function Header() {
+  const router = useRouter();
+  const navigateTo = (path) => {
+    if (router.pathname !== path) {
+      router.push(path);
+    }
+  };
+
   return (
     <div className="flex justify-between  py-4 px-10 border-b mb-5 items-center">
       {/* logo image */}
@@ -14,30 +23,45 @@ function Header() {
       {/* middle links */}
       <div className="flex gap-10 items-center font-semibold text-sm">
         <div className="">
-          <button className=" transform duration-200 py-2 rounded-md hover:text-[16px] hover:text-gray-700">
-            <Link href="/"> Home</Link>
+          <button
+            // onClick={() => navigateTo('/')}
+            className=" transform duration-200 py-2 rounded-md hover:text-[16px] hover:text-gray-700"
+          >
+            <Link href="/">Home</Link>
           </button>
         </div>
         <div className="">
           {' '}
-          <button className=" transform duration-200  py-2 rounded-md hover:text-[16px] hover:text-gray-700">
+          <button
+            // onClick={() => navigateTo('/recipes')}
+            className=" transform duration-200  py-2 rounded-md hover:text-[16px] hover:text-gray-700"
+          >
             <Link href="/recipes">Recipes</Link>
           </button>
         </div>
         <div className="">
           {' '}
-          <button className=" transform duration-200  py-2 rounded-md hover:text-[16px] hover:text-gray-700">
+          <button
+            // onClick={() => navigateTo('/blog')}
+            className=" transform duration-200  py-2 rounded-md hover:text-[16px] hover:text-gray-700"
+          >
             <Link href="/blog">Blog</Link>
           </button>
         </div>
         <div className="">
           {' '}
-          <button className=" transform duration-200  py-2 rounded-md hover:text-[16px] hover:text-gray-700">
+          <button
+            // onClick={() => navigateTo('/contact')}
+            className=" transform duration-200  py-2 rounded-md hover:text-[16px] hover:text-gray-700"
+          >
             <Link href="/contact">Contact</Link>
           </button>
         </div>
         <div className="">
-          <button className=" transform duration-200 py-2 rounded-md hover:text-[16px] hover:text-gray-700">
+          <button
+            // onClick={() => navigateTo('/aboutus')}
+            className=" transform duration-200 py-2 rounded-md hover:text-[16px] hover:text-gray-700"
+          >
             <Link href="/aboutus">About us</Link>
           </button>
         </div>

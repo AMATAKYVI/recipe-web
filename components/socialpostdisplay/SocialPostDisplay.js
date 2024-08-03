@@ -1,8 +1,32 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import SocialCard from './SocialCard';
 import { Instagram } from 'lucide-react';
-
+import axios from 'axios';
+const options = {
+  method: 'GET',
+  url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random',
+  params: {
+    tags: 'vegetarian,dessert',
+    number: '1',
+  },
+  headers: {
+    'x-rapidapi-key': 'cc150d9afdmsh73b74a059750090p161fccjsn3e6bc31abf3a',
+    'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+  },
+};
 function SocialPostDisplay() {
+  const [recipes, setRecipe] = useState([]);
+  useEffect(() => {
+    axios
+      .request(options)
+      .then(function (response) {
+        setRecipe(response.data.recipes);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }, []);
   return (
     <div className="mt-[100px] px-10">
       {/* title text */}

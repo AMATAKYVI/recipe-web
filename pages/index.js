@@ -9,7 +9,7 @@ import EmailLetter from '../components/emailletter/EmailLetter';
 import Footer from '../components/footer/Footer';
 import RecipeSampleDisplay from '../components/reciplesampledisplay/RecipeSampleDisplay';
 
-export default function Home({ data }) {
+export default function Home({}) {
   return (
     <div className="">
       <Head>
@@ -31,14 +31,14 @@ export default function Home({ data }) {
   );
 }
 //recipe-web-three.vercel.app
-export async function getServerSideProps(context) {
-  const getData = await fetch(
-    `https://recipe-web-three.vercel.app/api/food/allfood`
-  );
-  const data = await getData.json();
-  return {
-    props: {
-      data: data,
-    },
-  };
-}
+// export async function getServerSideProps(context) {
+//   const getData = await fetch(
+//     `https://recipe-web-three.vercel.app/api/food/allfood`
+//   );
+//   const data = await getData.json();
+//   return {
+//     props: {
+//       data: data,
+//     },
+//   };
+// }
